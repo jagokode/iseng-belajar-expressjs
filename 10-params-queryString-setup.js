@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/products", (req, res) => {
   const newProduct = products.map((product) => {
+    // only sending some part of product
     const { id, name, image } = product;
     return { id, name, image };
   });
