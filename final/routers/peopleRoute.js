@@ -7,12 +7,12 @@ const {
   deletePeople,
 } = require("../controllers/peopleController");
 
-router.get("/", getAllPeople);
+router.route("/").get(getAllPeople).post(addNewPeople);
+router.route("/:id").put(editPeople).delete(deletePeople);
 
-router.post("/", addNewPeople);
-
-router.put("/:id", editPeople);
-
-router.delete("/:id", deletePeople);
+// router.get("/", getAllPeople);
+// router.post("/", addNewPeople);
+// router.put("/:id", editPeople);
+// router.delete("/:id", deletePeople);
 
 module.exports = router;

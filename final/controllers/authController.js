@@ -1,5 +1,3 @@
-// const express = require("express");
-
 const login = (req, res) => {
   const { name } = req.body;
   if (!name)
